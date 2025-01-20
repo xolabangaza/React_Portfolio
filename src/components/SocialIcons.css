@@ -1,0 +1,16 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .social-icons a {
+    margin: 0 15px;
+    color: #ff007f;
+    font-size: 1.5rem; /* Matches icon sizes in the screenshot */
+  }
+  
+  .social-icons a:hover {
+    color: white;
+  }
+  

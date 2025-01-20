@@ -1,0 +1,58 @@
+.nav-bar {
+    position: fixed;
+    top: 3%; /* Moves navbar slightly below the top */
+    left: 50%; /* Align horizontally */
+    transform: translateX(-50%); /* Center-align based on width */
+    width: 50%; /* Restrict navbar width */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Adjust padding for spacing */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    z-index: 10; /* Ensure navbar stays above other elements */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    border: 1px solid rgba(255, 255, 255, 0.301); /* Subtle border */
+    border-radius: 60px; /* Rounded corners */
+  }
+  
+  .nav-bar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-bar ul li {
+    margin: 0 15px; /* Even spacing between items */
+    font-size: 1rem; /* Standard font size */
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-bar ul li:hover {
+    color: #ff007f; /* Pink hover effect */
+  }
+  
+  .contact-btn button {
+    background-color: #0f0f0f; /* Dark button */
+    color: white;
+    border: 1px solid #ff007f; /* Pink border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-btn button:hover {
+    background-color: #ff007f; /* Pink background on hover */
+    color: white;
+    box-shadow: 0 0 10px #ff007f; /* Glow effect */
+  }
+  
+  .logo {
+    font-size: 1.5rem; /* Logo font size */
+    color: white;
+  }
+  

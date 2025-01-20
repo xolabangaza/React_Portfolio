@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 20% 30%, #222222, #000000 80%);
+  color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px; /* Base font size for scaling */
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.content {
+  padding-top: 150px; /* Push content below navbar */
+}

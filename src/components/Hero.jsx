@@ -1,0 +1,26 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import SocialIcons from './SocialIcons';
+import './Hero.css';
+
+function Hero() {
+  return (
+    <motion.div
+      className="hero"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <h1>Xola Bangaza</h1>
+      <p>
+        I'm a Full-Stack Developer based in Cape Town, passionate about crafting visually 
+        stunning user <strong>interfaces and building</strong> scalable,
+         <strong>high-performance applications with a focus on</strong> efficiency and creativity.
+      </p>
+      {/* Include SocialIcons here */}
+      <SocialIcons />
+    </motion.div>
+  );
+}
+
+export default Hero;

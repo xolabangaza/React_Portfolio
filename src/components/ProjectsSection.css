@@ -1,0 +1,22 @@
+.projects-section {
+    padding: 50px 5%;
+    background-color: black;
+    color: white;
+  }
+  
+  .projects-section h2 {
+    font-size: 2rem;
+    color: #ff007f;
+  }
+  
+  .projects-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
