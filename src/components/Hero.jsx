@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Component } from "react";
 import { motion } from 'framer-motion';
 import SocialIcons from './SocialIcons';
 import './Hero.css';
 
-function Hero() {
-  return (
+class Hero extends Component {
+  render(){
+   return (
     <motion.div
       className="hero"
       initial={{ opacity: 0 }}
@@ -13,7 +14,7 @@ function Hero() {
     >
       <h1>Xola Bangaza</h1>
       <p>
-        I'm a Full-Stack Developer based in Cape Town, passionate about crafting visually 
+        I'm a Software Developer based in Cape Town, passionate about crafting visually 
         stunning user <strong>interfaces and building</strong> scalable,
          <strong>high-performance applications with a focus on</strong> efficiency and creativity.
       </p>
@@ -21,6 +22,7 @@ function Hero() {
       <SocialIcons />
     </motion.div>
   );
+ }
 }
 
 export default Hero;

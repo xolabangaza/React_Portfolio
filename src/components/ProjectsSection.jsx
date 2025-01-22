@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ProjectCard from "./ProjectCard";
 import "./ProjectsSection.css";
 
@@ -8,7 +8,7 @@ const ProjectsSection = () => {
       <h2>
         <span>Selected Projects</span>
       </h2>
-      <p>Recent works to see my creativity in action.</p>
+      <p>Discover my recent work and see creativity brought to life..</p>
       <div className="projects-container">
         <ProjectCard />
         {/* Add more <ProjectCard /> components if needed */}

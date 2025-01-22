@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from "react";
 import './Navbar.css';
 
-function Navbar() {
-  return (
-    <nav className="nav-bar">
+class Navbar extends Component {
+  render(){
+   return (
+     <nav className="nav-bar">
       <div className="logo">
         <span role="img" aria-label="logo">👨‍💻</span>
       </div>
@@ -16,8 +17,8 @@ function Navbar() {
       <div className="contact-btn">
         <button>Let's Work</button>
       </div>
-    </nav>
-  );
+     </nav>
+    );
+  }
 }
-
 export default Navbar;

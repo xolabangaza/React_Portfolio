@@ -6,10 +6,10 @@
   }
   
   .hero h1 {
-    font-size: 3rem; /* Matches the bold title size in the screenshot */
+    font-size: 4rem; /* Matches the bold title size in the screenshot */
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ff007f;
+    color: rgba(18, 253, 225, 1);
   }
   
   .hero p {
@@ -19,6 +19,6 @@
   }
   
   .hero strong {
-    color: #ff007f;
+    color: rgba(18, 253, 225, 1);
   }
   

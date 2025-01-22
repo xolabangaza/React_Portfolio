@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./ProjectCard.css";
 import cq from './images/cq.png'
 

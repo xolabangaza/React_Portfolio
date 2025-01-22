@@ -1,7 +1,7 @@
 .project-card {
     display: flex;
     background-color: #2e2d2dbd;
-    border: 1px solid rgba(255, 255, 255, 0.301); 
+    border: 1px solid rgba(18, 253, 226, 0.438); 
     border-radius: 15px;
     height: 500px;
     width: 70%;
@@ -25,7 +25,7 @@
   
   .project-details h3 {
     font-size: 1.5rem;
-    color: #ff007f;
+    color: rgba(18, 253, 225, 1);
   }
   
   .project-details p {
@@ -49,7 +49,7 @@
   
   .project-links a {
     margin-right: 15px;
-    color: #ff007f;
+    color: rgba(18, 253, 225, 1);
     font-size: 1rem;
     text-decoration: none;
   }
