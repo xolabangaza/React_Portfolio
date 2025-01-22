@@ -1,0 +1,60 @@
+{
+    "skills": [
+            {
+              "id":"1",
+              "lang": "HTML",
+              "image":"https://i.postimg.cc/R0bDJ1BM/html.png"
+            },
+            {
+              "id":"2",
+              "lang": "CSS",
+              "image":"https://i.postimg.cc/qM8SDC8L/css.png"
+            },
+            {
+              "id":"3",
+              "lang": "JAVASCRIPT",
+              "image":"https://i.postimg.cc/vHdSnHp6/java-script.png"
+            },
+            {
+              "id":"4",
+              "lang": "BOOTSTRAP",
+              "image":"https://i.postimg.cc/pLvbPB24/bootstrap.png"
+            },
+            {
+              "id":"5",
+              "lang": "VUEJS",
+              "image":"https://i.postimg.cc/C5JDdN37/vue.jpg"
+            }
+    ],
+    
+        "projects": [
+          {
+            "id": 1,
+            "image": "src/components/images/cq.png",
+            "title": "Project1",
+            "description": "A modern e-commerce online store, where customers can browse clothes ranging for both men and women, make and track their orders, and an onsite payment integration for easy payments.",
+            "techStack": ["TypeScript", "Next.js", "Node.js", "Express", "MongoDB"],
+            "liveLink": "https://example.com/project1",
+            "repoLink": "https://github.com/username/project1"
+          },
+          {
+            "id": 2,
+            "image": "src/components/images/cq.png",
+            "title": "Project2",
+            "description": "A modern blog platform that enables users to share posts, comment, and interact with an intuitive and responsive interface.",
+            "techStack": ["React", "CSS", "Firebase", "Redux"],
+            "liveLink": "https://example.com/project2",
+            "repoLink": "https://github.com/username/project2"
+          },
+          {
+            "id": 3,
+            "image": "src/components/images/cq.png",
+            "title": "Project3",
+            "description": "A modern blog platform that enables users to share posts, comment, and interact with an intuitive and responsive interface.",
+            "techStack": ["React", "CSS", "Firebase", "Redux"],
+            "liveLink": "https://example.com/project2",
+            "repoLink": "https://github.com/username/project2"
+          }
+        ]
+      }
+      

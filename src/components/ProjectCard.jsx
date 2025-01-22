@@ -1,75 +1,45 @@
-import React, { Component } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import "./ProjectCard.css";
-import cq from './images/cq.png'
 
-const ProjectCard = () => {
+const ProjectCard = ({ image, title, description, techStack, liveLink, repoLink }) => {
   return (
-    <>
     <div className="project-card">
       <div className="project-image">
-        <img
-          src={cq} // Replace with actual project image URL
-          alt="Project Screenshot"
-        />
+        <img src={image} alt={`${title} Screenshot`} />
       </div>
       <div className="project-details">
-        <h3>Project1</h3>
-        <p>
-          A modern e-commerce online store, where customers can browse clothes
-          ranging for both men and women, make and track their orders, and an
-          onsite payment integration for easy payments.
-        </p>
+        <h3>{title}</h3>
+        <p>{description}</p>
         <div className="tech-stack">
-          <span>TypeScript</span>
-          <span>Next.js</span>
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>MongoDB</span>
+          {techStack.split(", ").map((tech, index) => (
+            <span key={index}>{tech}</span>
+          ))}
         </div>
         <div className="project-links">
-          <a href="" target="_blank" rel="noopener noreferrer">
-            Live Preview →
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <i className="github-icon"></i>
-          </a>
+          {liveLink && (
+            <a href={liveLink} target="_blank" rel="noopener noreferrer">
+              Live Preview →
+            </a>
+          )}
+          {repoLink && (
+            <a href={repoLink} target="_blank" rel="noopener noreferrer">
+              <i className="github-icon">GitHub</i>
+            </a>
+          )}
         </div>
       </div>
     </div>
-    <div className="project-card">
-    <div className="project-image">
-      <img
-        src={cq} // Replace with actual project image URL
-        alt="Project Screenshot"
-      />
-    </div>
-   
-    <div className="project-details">
-      <h3>Project2</h3>
-      <p>
-        A modern e-commerce online store, where customers can browse clothes
-        ranging for both men and women, make and track their orders, and an
-        onsite payment integration for easy payments.
-      </p>
-      <div className="tech-stack">
-        <span>TypeScript</span>
-        <span>Next.js</span>
-        <span>Node.js</span>
-        <span>Express</span>
-        <span>MongoDB</span>
-      </div>
-      <div className="project-links">
-        <a href="" target="_blank" rel="noopener noreferrer">
-          Live Preview →
-        </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <i className="github-icon"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-  </>
   );
+};
+
+ProjectCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  techStack: PropTypes.string.isRequired,
+  liveLink: PropTypes.string,
+  repoLink: PropTypes.string,
 };
 
 export default ProjectCard;
