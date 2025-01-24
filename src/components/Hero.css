@@ -1,24 +1,69 @@
+/* Hero container */
 .hero {
-    color: #ffffff;
-    max-width: 700px;
-    margin: 100px auto; /* Add spacing below navbar */
-    text-align: center;
+  /* color: #ffffff; */
+  margin: 100px auto;
+  text-align: center;
+  position: relative;
+}
+
+.hero p {
+  text-align: center !important;
+  max-width: 700px;
+  font-size: 1.2rem; /* Matches the smaller text size in the screenshot */
+  line-height: 1.8;
+  color: #f0f0f0;
+  margin: auto;
+}
+p{
+  text-align: center;
+}
+
+.hero strong {
+  color: rgba(18, 253, 225, 1);
+}
+ 
+/* Background text with overlapping effect */
+.background-text {
+  /* max-width: 700px; */
+  font-size: 5vw; /* Large font size for background effect */
+  font-weight: bold;
+  color: rgba(18, 253, 225, 0.2); /* Updated color with transparency */
+  letter-spacing: 5px; /* Adds spacing between letters */
+  position: absolute;
+  top: -35%;
+  left: 49.9%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none; /* Prevent interaction */
+  text-shadow: 
+    2px 2px 0 rgba(18, 253, 225, 0.2),
+    -2px -2px 0 rgba(18, 253, 225, 0.2),
+    4px 4px 0 rgba(18, 253, 225, 0.2); /* Creates a repeated text effect */
+}
+ 
+/* Foreground/main text */
+.main-text {
+  font-size: 5vw;
+  font-weight: bold;
+  color: rgba(18, 253, 225, 1); /* Solid color for main text */
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+ 
+/* Overlay container */
+.overlay-text {
+  position: relative;
+  /* margin-bottom: 40px; */
+}
+ 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .background-text {
+    font-size: 10vw; /* Larger for smaller devices */
   }
-  
-  .hero h1 {
-    font-size: 4rem; /* Matches the bold title size in the screenshot */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: rgba(18, 253, 225, 1);
+  .main-text {
+    font-size: 8vw;
   }
-  
-  .hero p {
-    font-size: 1.2rem; /* Matches the smaller text size in the screenshot */
-    line-height: 1.8;
-    color: #f0f0f0;
-  }
-  
-  .hero strong {
-    color: rgba(18, 253, 225, 1);
-  }
-  
+}

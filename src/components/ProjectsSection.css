@@ -2,6 +2,8 @@
     padding: 50px 5%;
     background-color: black;
     color: white;
+    height: 100vh; /* Full viewport height for scroll effects */
+    overflow-y: scroll; /* Enable scrolling */
   }
   
   .projects-section h2 {
@@ -16,7 +18,14 @@
   
   .projects-container {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; /* Stack cards vertically */
+    gap: -50px; /* Overlap cards slightly for stacking effect */
+    position: relative;
+  }
+  
+  .motion-card {
+    position: relative;
+    z-index: 1; /* Allow stacking of cards */
+    transform-origin: center; /* For smooth scale transitions */
   }
   
