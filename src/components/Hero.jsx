@@ -1,34 +1,26 @@
-import React, { Component } from "react";
-import { motion } from 'framer-motion';
-import SocialIcons from './SocialIcons';
-import './Hero.css';
+import React from "react";
+import SocialIcons from "./SocialIcons"; // Importing SocialIcons component
 
-class Hero extends Component {
-  render(){
-   return (
-    <motion.div
-      className="hero"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="overlay-text">
-        <h1 className="background-text">
-        Xola Bangaza </h1>
-          <h1 className="main-text">
-          Xola Bangaza </h1>
-       </div>
-      {/* <h1 className="background-text">Xola Bangaza</h1> */}
-      <p>
-        I'm a <strong>Software Developer </strong>based in Cape Town, passionate about crafting visually 
-        stunning user <strong>interfaces and building</strong> scalable,
-         <strong>high-performance applications with a focus on</strong> efficiency and creativity.
+export function Hero() {
+  return (
+    <section className="flex flex-col items-center justify-center text-center py-20 bg-black text-white">
+      {/* <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm flex items-center">
+        <span className="mr-2 text-pink-500">🧑🏽‍💻</span> Available for new projects
+      </span> */}
+      <h1 className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ec008c] to-[#fc6767] mt-4">
+        Xola Bangaza
+      </h1>
+      <p className="text-lg text-gray-400 max-w-2xl mt-4">
+        I'm a <span className="font-bold text-white">Software Developer</span> based in
+        <span className="text-pink-400"> Cape Town</span>, specializing in designing
+        <span className="font-bold text-white"> aesthetically pleasing UIs</span> and
+        <span className="font-bold text-white"> scalable applications</span> that perform efficiently.
       </p>
-      {/* Include SocialIcons here */}
-      <SocialIcons />
-    </motion.div>
+      
+      {/* Calling SocialIcons Component Here */}
+      <div className="mt-6">
+        <SocialIcons />
+      </div>
+    </section>
   );
- }
 }
-
-export default Hero;

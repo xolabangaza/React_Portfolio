@@ -1,8 +1,8 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import {Navbar} from './components/Navbar';
+import {Hero} from './components/Hero';
 import ProjectsSection from './components/ProjectsSection';
-import './App.css';
+import './index.css';
 
 function App() {
   return (
