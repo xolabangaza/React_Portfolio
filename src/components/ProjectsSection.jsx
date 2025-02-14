@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import Project from "../models/Project";
-import "./ProjectsSection.css";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
-    // Fetch data from JSON server
     fetch("http://localhost:5000/projects")
       .then((response) => response.json())
       .then((data) => {
         const projectInstances = data.map(
-          (proj) =>
+          (proj, index) =>
             new Project(
               proj.id,
               proj.image,
@@ -21,7 +20,8 @@ const ProjectsSection = () => {
               proj.description,
               proj.techStack,
               proj.liveLink,
-              proj.repoLink
+              proj.repoLink,
+              index + 1 // Numbering projects
             )
         );
         setProjects(projectInstances);
@@ -30,34 +30,20 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="projects-section">
-      <h2>
-        <span>Selected Projects</span>
-      </h2>
-      <p>Scroll down to explore the projects. </p>
+    <section className="py-20 projects-section">
+      <h2 className="text-[#f99fc4] text-3xl py-4 font-bold" >Creatives</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
             className="motion-card"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-            }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: false, margin: "-20%" }}
-            style={{ zIndex: projects.length - index }} // Ensure higher cards are on top
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            style={{ zIndex: projects.length - index, transform: `translateY(${scrollYProgress.get() * 100}px)` }}
           >
-            <ProjectCard
-              image={project.image}
-              title={project.title}
-              description={project.getShortDescription()}
-              techStack={project.getTechStack().split(", ")}
-              liveLink={project.liveLink}
-              repoLink={project.repoLink}
-            />
+            <ProjectCard project={project} number={index + 1} />
           </motion.div>
         ))}
       </div>
