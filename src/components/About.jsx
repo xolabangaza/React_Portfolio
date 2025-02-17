@@ -10,7 +10,7 @@ export function About() {
         HTML: <FaHtml5 className="text-red-500 text-3xl" />,
         CSS: <FaCss3Alt className="text-blue-500 text-3xl" />,
         Javascript: <FaJs className="text-yellow-400 text-3xl" />,
-        Typescript: <FaJs className="text-blue-400 text-3xl" />, 
+        Typescript: <FaJs className="text-blue-400 text-3xl" />,
         Tailwind: <SiTailwindcss className="text-teal-400 text-3xl" />,
         React: <FaReact className="text-cyan-400 text-3xl" />,
         NodeJs: <FaNode className="text-green-400 text-3xl" />,
@@ -20,7 +20,7 @@ export function About() {
         PostgreSQL: <DiPostgresql className="text-blue-600 text-3xl" />,
         Bootstrap: <FaBootstrap className="text-purple-600 text-3xl" />,
         Figma: <SiFigma className="text-purple-400 text-3xl" />,
-        Csharp: <FaCogs className="text-cyan-600 text-3xl" />, 
+        Csharp: <FaCogs className="text-cyan-600 text-3xl" />,
         WordPress: <DiWordpress className="text-blue-700 text-3xl" />
     };
 
@@ -46,21 +46,17 @@ export function About() {
 
                 {/* About Me */}
                 <div className="bg-gray-950 text-gray-400 p-12 rounded-xl border border-gray-800 flex flex-col items-center shadow-lg w-full md:w-2/4">
-                    <p className="text-left ">
-                        My journey into <span className="font-bold text-gray-300">software engineering</span> began with a passion for artistic
-                        creation, honed through drawing and making music. This creative background naturally guided me toward the
-                        world of technology.
+                    <p className="text-left">
+                        My journey into <span className="font-bold text-gray-300">software development</span> began with a passion for creative expression, which naturally led me to the world of technology.
                     </p>
                     <p className="mt-2 text-left">
-                        I specialize in both <span className="font-bold text-gray-300">frontend</span> and <span className="font-bold text-gray-300">backend</span> development, thriving on
-                        the creativity coding offers. <span className="italic">"For me, coding is not just a profession, it's a
-                            space to innovate and unleash my creativity."</span>
+                        I specialize primarily in <span className="font-bold text-gray-300">frontend</span> development, but I am also experienced in <span className="font-bold text-gray-300">backend</span> development. I thrive on the creativity that coding offers. <span className="italic">For me, coding is not just a profession—it's a space to innovate and unleash my creativity.</span>
                     </p>
                     <p className="mt-2 text-left">
-                        Beyond coding, I enjoy video creation, editing, and watching anime, which inspire my approach to UI/UX
-                        design through <span className="font-bold text-gray-300">visual storytelling</span> and <span className="font-bold text-gray-300">aesthetics</span>.
+                        Beyond coding, I enjoy playing <span className="font-bold text-gray-300">tennis</span> and exploring, which help me maintain a balanced and inspired approach to my work.
                     </p>
                 </div>
+
             </div>
         </div>
     );
