@@ -30,19 +30,20 @@ const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="rounded-lg w-full min-h-[400px] min-w-[500px] object-cover shadow-md"
+          className="rounded-2xl w-full min-h-[460px] min-w-[550px] object-cover shadow-md mb-0 mt-6" // Added margin-top and removed bottom margin
         />
       </div>
 
       {/* Description and Tech Stack Section with gap */}
       <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-12 pl-12 flex flex-col gap-8">
-        <h3 className="text-2xl mt-10 font-semibold text-[#f99fc4] tracking-wide">
+        <h3 className="text-left pl-8 text-2xl mt-10 font-semibold text-[#f99fc4] tracking-wide">
           {project.title}
         </h3>
-        <p className="mt-2 text-gray-400 text-m leading-relaxed w-full min-w-[100px]">
+        <p className="mt-2 pl-8 text-gray-400 text-m leading-relaxed min-w-[100px] text-left">
           {project.description}
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
+
+        <div className="mt-4 pl-5 flex flex-wrap gap-2">
           {/* Loop over tech stack and display corresponding icons */}
           {project.techStack.map((tech, index) => {
             // Render the icon for each technology in the tech stack
@@ -61,7 +62,7 @@ const ProjectCard = ({ project }) => {
             href={project.liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#ec008c] text-lg hover:text-[#f99fc4] transition duration-300"
+            className="text-[#ec008c] text-lg hover:text-[#f99fc4] transition duration-300 pl-8"
           >
             Live Demo
           </a>
