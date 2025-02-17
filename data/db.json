@@ -29,7 +29,7 @@
   "projects": [
     {
       "id": 1,
-      "image": "src/components/images/cq.png",
+      "image": "src/components/images/visio.png",
       "title": "Project1",
       "description": "A modern e-commerce online store, where customers can browse clothes ranging for both men and women, make and track their orders, and an onsite payment integration for easy payments.A modern e-commerce online store",
       "techStack": ["React","React", "React","React","React","Next.js", "Node.js", "Express", "MongoDB"],

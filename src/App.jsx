@@ -2,6 +2,7 @@ import React from 'react';
 import {Navbar} from './components/Navbar';
 import {Hero} from './components/Hero';
 import ProjectsSection from './components/ProjectsSection';
+import { About } from './components/About';
 import './index.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div className="content">
         <Hero />
         <ProjectsSection/>
+        <About/>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const SocialIcons = () => {
   href="https://www.linkedin.com"
   target="_blank"
   rel="noopener noreferrer"
-  className="text-3xl mx-6 text-[#ec008c] transition-all duration-300 hover:text-white"
+  className="text-3xl mx-6 text-[#ec008c] transition-all duration-300 hover:text-[#f99fc4]"
 >
   <FaLinkedin />
 </a>
@@ -16,7 +16,7 @@ const SocialIcons = () => {
   href="https://github.com"
   target="_blank"
   rel="noopener noreferrer"
-  className="text-3xl mx-6 text-[#ec008c] transition-all duration-300 hover:text-white"
+  className="text-3xl mx-6 text-[#ec008c] transition-all duration-300 hover:text-[#f99fc4]"
 >
   <FaGithub />
 </a>

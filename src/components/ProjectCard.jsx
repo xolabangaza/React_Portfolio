@@ -15,7 +15,6 @@ const techIcons = {
 const ProjectCard = ({ project }) => {
   return (
     <div className="relative flex flex-col md:flex-row via-gray-900 to-black rounded-xl overflow-hidden shadow-lg p-6 text-white border border-gray-700 w-full min-w-[900px] max-w-6xl mx-auto min-h-[400px] mb-6">
-      {/* GitHub Icon Positioned on Top Right */}
       <a
         href={project.repoLink}
         target="_blank"
@@ -24,17 +23,13 @@ const ProjectCard = ({ project }) => {
       >
         <FaGithub />
       </a>
-
-      {/* Image section with extra margin-left */}
       <div className="w-full md:w-1/3 ml-12 pl-4 flex justify-center items-center">
         <img
           src={project.image}
           alt={project.title}
-          className="rounded-2xl w-full min-h-[460px] min-w-[550px] object-cover shadow-md mb-0 mt-6" // Added margin-top and removed bottom margin
+          className="rounded-2xl w-full min-h-[460px] min-w-[550px] object-cover shadow-md mb-0 mt-6" 
         />
       </div>
-
-      {/* Description and Tech Stack Section with gap */}
       <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-12 pl-12 flex flex-col gap-8">
         <h3 className="text-left pl-8 text-2xl mt-10 font-semibold text-[#f99fc4] tracking-wide">
           {project.title}
@@ -42,11 +37,8 @@ const ProjectCard = ({ project }) => {
         <p className="mt-2 pl-8 text-gray-400 text-m leading-relaxed min-w-[100px] text-left">
           {project.description}
         </p>
-
         <div className="mt-4 pl-5 flex flex-wrap gap-2">
-          {/* Loop over tech stack and display corresponding icons */}
           {project.techStack.map((tech, index) => {
-            // Render the icon for each technology in the tech stack
             return (
               <div
                 key={index}
