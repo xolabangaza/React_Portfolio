@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaReact, FaNode, FaCss3Alt, FaHtml5, FaVuejs, FaBootstrap, FaJs } from "react-icons/fa";
+import { DiFirebase, DiNodejs } from "react-icons/di"; // Add other icons from react-icons/di if needed
 
 // The techIcons object mapping tech names to corresponding React Icons
 const techIcons = {
@@ -9,7 +10,11 @@ const techIcons = {
   BOOTSTRAP: <FaBootstrap />,
   VUEJS: <FaVuejs />,
   REACT: <FaReact />,
-  NODEJS: <FaNode />
+  NODEJS: <FaNode />,
+  EXPRESS: <DiNodejs />,
+  MONGODB: <DiFirebase />, 
+  FIREBASE: <DiFirebase />, 
+  REDUX: <FaReact /> 
 };
 
 const ProjectCard = ({ project }) => {
@@ -39,12 +44,16 @@ const ProjectCard = ({ project }) => {
         </p>
         <div className="mt-4 pl-5 flex flex-wrap gap-2">
           {project.techStack.map((tech, index) => {
+            const techUpper = tech.toUpperCase();
+            // If the tech icon is missing, use a fallback (like a simple span)
+            const icon = techIcons[techUpper] || <span className="text-gray-500">N/A</span>;
+
             return (
               <div
                 key={index}
                 className="flex items-center gap-1 text-[#ec008c] text-2xl px-3 py-1 rounded-full font-medium shadow-md"
               >
-                {techIcons[tech.toUpperCase()]} {/* Render the tech icon */}
+                {icon} {/* Render the tech icon or fallback */}
               </div>
             );
           })}

@@ -3,7 +3,7 @@ import SocialIcons from "./SocialIcons"; // Importing SocialIcons component
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center py-20 bg-black text-white">
+    <section className="flex flex-col items-center justify-center text-center py-56 bg-black text-white">
       {/* <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm flex items-center">
         <span className="mr-2 text-pink-500">🧑🏽‍💻</span> Available for new projects
       </span> */}

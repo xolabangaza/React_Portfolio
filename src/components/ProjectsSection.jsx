@@ -30,8 +30,8 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="py-20 projects-section">
-      <h2 className="text-[#f99fc4] text-3xl py-4 font-bold" >Featured Projects</h2>
+    <section id="projects" className="py-20 projects-section">
+      <h2 className="text-[#f99fc4] text-center text-3xl py-4 font-bold" >Featured Projects</h2>
       <div className="projects-container">
         {projects.map((project, index) => (
           <motion.div

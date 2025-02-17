@@ -1,20 +1,32 @@
-import React from 'react';
-import {Navbar} from './components/Navbar';
-import {Hero} from './components/Hero';
-import ProjectsSection from './components/ProjectsSection';
-import { About } from './components/About';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
+import ProjectsSection from "./components/ProjectsSection";
+import { About } from "./components/About";
 import './index.css';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <div className="content">
+      <Routes>
+        {/* For full-page navigation */}
+        <Route path="/hero" element={<Hero />} />
+        <Route path="/Projects" element={<ProjectsSection />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
+    
+      <div id="hero">
         <Hero />
-        <ProjectsSection/>
-        <About/>
       </div>
-    </div>
+      <div id="projects">
+        <ProjectsSection />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+    </Router>
   );
 }
 

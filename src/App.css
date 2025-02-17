@@ -16,3 +16,6 @@ body {
 .content {
   padding-top: 150px; /* Push content below navbar */
 }
+html {
+  scroll-behavior: smooth;
+}
