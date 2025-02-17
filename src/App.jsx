@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import { About } from "./components/About";
+import { ContactSection } from "./components/Contact";
 import './index.css';
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
         <Route path="/hero" element={<Hero />} />
         <Route path="/Projects" element={<ProjectsSection />} />
         <Route path="/About" element={<About />} />
+        <Route path="/ContactSection" element={<ContactSection />} />
+
       </Routes>
     
       <div id="hero">
@@ -25,6 +28,9 @@ function App() {
       </div>
       <div id="about">
         <About />
+      </div>
+      <div id="ContactSection">
+        <ContactSection />
       </div>
     </Router>
   );
