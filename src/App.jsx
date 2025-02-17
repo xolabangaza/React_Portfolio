@@ -5,6 +5,7 @@ import { Hero } from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import { About } from "./components/About";
 import { ContactSection } from "./components/Contact";
+import { Footer } from "./components/Footer";
 import './index.css';
 
 function App() {
@@ -17,9 +18,7 @@ function App() {
         <Route path="/Projects" element={<ProjectsSection />} />
         <Route path="/About" element={<About />} />
         <Route path="/ContactSection" element={<ContactSection />} />
-
       </Routes>
-    
       <div id="hero">
         <Hero />
       </div>
@@ -32,6 +31,7 @@ function App() {
       <div id="ContactSection">
         <ContactSection />
       </div>
+    <Footer/>
     </Router>
   );
 }
