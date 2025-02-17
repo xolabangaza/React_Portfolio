@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
         />
       </div>
       <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-12 pl-12 flex flex-col gap-8">
-        <h3 className="text-left pl-8 text-2xl mt-10 font-semibold text-[#f99fc4] tracking-wide">
+        <h3 className="text-left pl-8 text-2xl mt-10 font-semibold text-gray-300 tracking-wide">
           {project.title}
         </h3>
         <p className="mt-2 pl-8 text-gray-400 text-m leading-relaxed min-w-[100px] text-left">

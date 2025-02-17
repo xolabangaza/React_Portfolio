@@ -4,6 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import { About } from "./components/About";
+import { Resume } from "./components/Resume";
 import { ContactSection } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import './index.css';
@@ -17,6 +18,7 @@ function App() {
         <Route path="/hero" element={<Hero />} />
         <Route path="/Projects" element={<ProjectsSection />} />
         <Route path="/About" element={<About />} />
+        <Route path="/Resume" element={<Resume />} />
         <Route path="/ContactSection" element={<ContactSection />} />
       </Routes>
       <div id="hero">
@@ -27,6 +29,9 @@ function App() {
       </div>
       <div id="about">
         <About />
+      </div>
+      <div id="resume">
+        <Resume />
       </div>
       <div id="ContactSection">
         <ContactSection />
