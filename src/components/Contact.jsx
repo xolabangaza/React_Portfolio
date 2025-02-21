@@ -15,7 +15,7 @@ export function ContactSection() {
         <div className="p-8 rounded-lg shadow-xl text-center flex flex-col items-center">
           {/* Bitmoji or Image */}
           <img
-            src="src/components/images/bars.png" // Replace with your Bitmoji URL
+            src="src/components/images/bars.png"
             alt="Goodbye Bitmoji"
             className="w-80 h-80 mb-4"
           />

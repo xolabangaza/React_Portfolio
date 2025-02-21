@@ -1,8 +1,7 @@
 import React from "react";
 import { FaGithub, FaReact, FaNode, FaCss3Alt, FaHtml5, FaVuejs, FaBootstrap, FaJs } from "react-icons/fa";
-import { DiFirebase, DiNodejs } from "react-icons/di"; // Add other icons from react-icons/di if needed
+import { DiFirebase, DiNodejs } from "react-icons/di";
 
-// The techIcons object mapping tech names to corresponding React Icons
 const techIcons = {
   HTML: <FaHtml5 />,
   CSS: <FaCss3Alt />,
@@ -12,14 +11,14 @@ const techIcons = {
   REACT: <FaReact />,
   NODEJS: <FaNode />,
   EXPRESS: <DiNodejs />,
-  MONGODB: <DiFirebase />, 
-  FIREBASE: <DiFirebase />, 
-  REDUX: <FaReact /> 
+  MONGODB: <DiFirebase />,
+  FIREBASE: <DiFirebase />,
+  REDUX: <FaReact />,
 };
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="relative flex flex-col md:flex-row via-gray-900 to-black rounded-xl overflow-hidden shadow-lg p-6 text-white border border-gray-700 w-full min-w-[900px] max-w-6xl mx-auto min-h-[400px] mb-6">
+    <div className="relative flex flex-col md:flex-row via-gray-900 to-black rounded-xl overflow-hidden shadow-lg p-6 text-white bg bg-black border border-gray-700 w-full min-w-[900px] max-w-6xl mx-auto min-h-[400px] mb-6">
       <a
         href={project.repoLink}
         target="_blank"
@@ -32,7 +31,7 @@ const ProjectCard = ({ project }) => {
         <img
           src={project.image}
           alt={project.title}
-          className="rounded-2xl w-full min-h-[460px] min-w-[550px] object-cover shadow-md mb-0 mt-6" 
+          className="rounded-2xl w-full min-h-[460px] min-w-[550px] object-cover shadow-md mb-0 mt-6"
         />
       </div>
       <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-12 pl-12 flex flex-col gap-8">
@@ -42,22 +41,23 @@ const ProjectCard = ({ project }) => {
         <p className="mt-2 pl-8 text-gray-400 text-m leading-relaxed min-w-[100px] text-left">
           {project.description}
         </p>
+
         <div className="mt-4 pl-5 flex flex-wrap gap-2">
           {project.techStack.map((tech, index) => {
             const techUpper = tech.toUpperCase();
-            // If the tech icon is missing, use a fallback (like a simple span)
             const icon = techIcons[techUpper] || <span className="text-gray-500">N/A</span>;
 
             return (
-              <div
-                key={index}
-                className="flex items-center gap-1 text-[#ec008c] text-2xl px-3 py-1 rounded-full font-medium shadow-md"
-              >
-                {icon} {/* Render the tech icon or fallback */}
+              <div key={index} className="relative group flex items-center gap-1 text-[#ec008c] text-2xl px-3 py-1 rounded-full font-medium shadow-md">
+                {icon}
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs px-2 py-1 rounded-md shadow-md">
+                  {tech}
+                </span>
               </div>
             );
           })}
         </div>
+
         <div className="mt-4 flex space-x-4">
           <a
             href={project.liveLink}

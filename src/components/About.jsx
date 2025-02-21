@@ -4,6 +4,7 @@ import { DiPostgresql, DiWordpress } from "react-icons/di"; // For PostgreSQL, W
 import { SiTailwindcss, SiMongodb, SiFigma } from "react-icons/si"; // For NextJS, Tailwind, Express, MongoDB
 import { FaCogs } from "react-icons/fa"; // Fallback for C#
 
+
 export function About() {
     // The techIcons object mapping tech names to corresponding React Icons
     const techIcons = {
@@ -25,7 +26,7 @@ export function About() {
     };
 
     return (
-        <div className="min-h-screen bg-black text-white flex flex-col items-center mx-auto p-12 md:p-24">
+        <div id="about" className="min-h-screen text-white flex flex-col items-center mx-auto p-12 md:p-24">
             {/* Heading */}
             <h1 className="text-7xl text-left font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#ec008c] to-[#fc6767] mt-4">
                 I craft digital experiences, blending <br />creativity to shape the future.
