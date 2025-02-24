@@ -1,6 +1,9 @@
-import React from "react";
+'use client';
+
+import React, { useRef } from "react";
 import { FaGithub, FaReact, FaNode, FaCss3Alt, FaHtml5, FaVuejs, FaBootstrap, FaJs } from "react-icons/fa";
 import { DiFirebase, DiNodejs } from "react-icons/di";
+import { useTransform, motion, useScroll } from 'framer-motion';
 
 const techIcons = {
   HTML: <FaHtml5 />,
@@ -17,8 +20,21 @@ const techIcons = {
 };
 
 const ProjectCard = ({ project }) => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "start start"],
+  });
+
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]); // Scale animation for the image
+  const cardScale = useTransform(scrollYProgress, [0, 1], [1, 1.05]); // Scale animation for the card
+
   return (
-    <div className="relative flex flex-col md:flex-row via-gray-900 to-black rounded-xl overflow-hidden shadow-lg p-6 text-white bg bg-black border border-gray-700 w-full min-w-[900px] max-w-6xl mx-auto min-h-[400px] mb-6">
+    <motion.div
+      ref={containerRef}
+      style={{ scale: cardScale }}
+      className="relative flex flex-col md:flex-row via-gray-900 to-black rounded-xl overflow-hidden shadow-lg p-6 text-white bg-black border border-gray-700 w-full min-w-[900px] max-w-6xl mx-auto min-h-[400px] mb-6"
+    >
       <a
         href={project.repoLink}
         target="_blank"
@@ -28,11 +44,15 @@ const ProjectCard = ({ project }) => {
         <FaGithub />
       </a>
       <div className="w-full md:w-1/3 ml-12 pl-4 flex justify-center items-center">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="rounded-2xl w-full min-h-[460px] min-w-[550px] object-cover shadow-md mb-0 mt-6"
-        />
+        {/* Parent div that holds the image */}
+        <div className="relative w-full min-h-[460px] min-w-[550px] overflow-hidden rounded-2xl">
+          <motion.img
+            src={project.image}
+            alt={project.title}
+            style={{ scale: imageScale }}
+            className="rounded-2xl w-full min-h-[460px] min-w-[550px] h-full object-cover shadow-md mb-0 mt-6"
+          />
+        </div>
       </div>
       <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-12 pl-12 flex flex-col gap-8">
         <h3 className="text-left pl-8 text-2xl mt-10 font-semibold text-gray-300 tracking-wide">
@@ -69,7 +89,7 @@ const ProjectCard = ({ project }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
