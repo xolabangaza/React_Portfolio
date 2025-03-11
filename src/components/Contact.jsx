@@ -1,3 +1,4 @@
+import React from "react";
 import { FaLinkedin, FaGithub, FaEnvelope, FaArrowRight } from "react-icons/fa"; // Import arrow icon
 
 export function ContactSection() {

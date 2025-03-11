@@ -13,7 +13,7 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    const sections = ["home", "projects", "about", "resume", "contact"];
+    const sections = ["hero", "projects", "about", "resume", "contact"];
     const options = {
       rootMargin: "0px",
       threshold: 0.4, // Trigger when 50% of the section is in view
