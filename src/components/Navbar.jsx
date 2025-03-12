@@ -3,17 +3,26 @@ import React, { useState, useEffect, useCallback } from "react";
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("home"); // Default section
 
-  // Scroll event listener to detect the section currently in view
   const handleIntersection = useCallback((entries) => {
+    let mostVisibleSection = activeSection;
+    let maxVisibility = 0;
+  
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setActiveSection(entry.target.id); // Set the section ID as active
+        const visibility = entry.intersectionRatio; // How much of the section is visible
+        if (visibility > maxVisibility) {
+          maxVisibility = visibility;
+          mostVisibleSection = entry.target.id;
+        }
       }
     });
-  }, []);
+  
+    setActiveSection(mostVisibleSection);
+  }, [activeSection]);
+  
 
   useEffect(() => {
-    const sections = ["hero", "projects", "about", "resume", "contact"];
+    const sections = ["home", "projects", "about", "resume", "contact"];
     const options = {
       rootMargin: "0px",
       threshold: 0.4, // Trigger when 50% of the section is in view
@@ -44,7 +53,7 @@ export function Navbar() {
     <nav className="fixed top-8 left-1/2 transform -translate-x-1/2 w-4/5 sm:w-2/5 flex justify-between items-center px-2 py-2 bg-black border border-gray-600 rounded-full z-10">
       <div className="text-2xl text-gray-300">
         <span className="cursor-pointer" role="img" aria-label="logo">
-          <a href="#home">👨‍💻</a>
+          <a href="/">👨‍💻</a>
         </span>
       </div>
       <ul className="flex space-x-6 text-gray-400 text-lg">

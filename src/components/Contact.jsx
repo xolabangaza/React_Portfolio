@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaArrowRight } from "react-icons/fa";
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 text-white">
+    <section id="contact" className="py-20 pb-16 text-white">
       <h1 className="text-5xl text-center font-bold text-transparent bg-clip-text bg-gradient-to-br from-[#ec008c] to-[#fc6767] mt-4">
         Let's Connect
       </h1>
