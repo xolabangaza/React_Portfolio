@@ -6,7 +6,6 @@ import { Resume } from "./components/Resume";
 import { ContactSection } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import StarryBackground from "./components/StarryBackground";
-// At the top of your App.jsx
 import { Navbar } from './components/Navbar'; // Adjust the path based on where your Navbar file is located
 
 import './index.css';

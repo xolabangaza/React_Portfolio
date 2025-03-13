@@ -32,9 +32,9 @@ export function About() {
                 I craft digital experiences, blending <br />creativity to shape the future.
             </h1>
             {/* Content Section */}
-            <div className="mt-10 flex flex-col md:flex-row gap-3">
+            <div className=" mt-10 flex flex-col md:flex-row gap-3">
                 {/* Tech Stack */}
-                <div className="bg-gray-950 ml-56 p-6 border border-gray-800 rounded-xl shadow-lg w-full md:w-1/3">
+                <div className="animate__animated animate__fadeInLeft bg-gray-950 ml-56 p-6 border border-gray-800 rounded-xl shadow-lg w-full md:w-1/3">
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
                         {["HTML", "CSS", "Javascript", "Typescript", "Tailwind", "React", "NodeJs", "VueJS", "Postman", "MongoDB", "PostgreSQL", "Bootstrap", "Figma", "Csharp", "WordPress"].map((tech) => (
                             <div key={tech} className="flex items-center gap-2">
@@ -46,7 +46,7 @@ export function About() {
                 </div>
 
                 {/* About Me */}
-                <div className="bg-gray-950 text-gray-400 p-12 rounded-xl border border-gray-800 flex flex-col items-center shadow-lg w-full md:w-2/4">
+                <div className="animate__animated animate__fadeInRight bg-gray-950 text-gray-400 p-12 rounded-xl border border-gray-800 flex flex-col items-center shadow-lg w-full md:w-2/4">
                     <p className="text-left">
                         My journey into <span className="font-bold text-gray-300">software development</span> began with a passion for creative expression, which naturally led me to the world of technology.
                     </p>
