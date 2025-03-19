@@ -67,7 +67,7 @@ export function Resume() {
               <div className="font-bold text-red-700">LC Studio</div>
               <time className="font-caveat font-medium text-red-700">2023 October</time>
             </div>
-            <div className="text-slate-500">Pretium lectus quam id leo. Urna et pharetra aliquam vestibulum morbi blandit cursus risus.</div>
+            <div className="text-slate-500">Created web applications using wordpress</div>
           </div>
         </motion.div>
       </div>

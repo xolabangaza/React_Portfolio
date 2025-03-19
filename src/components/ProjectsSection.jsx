@@ -1,43 +1,48 @@
 import React, { useEffect, useState } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState([]);
-  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     fetch("http://localhost:5000/projects")
       .then((response) => response.json())
       .then((data) => {
-        // Directly set the fetched data as 'projects' instead of mapping to a Project class
-        setProjects(data);
+        setProjects(data); // Directly set the fetched data as 'projects'
       })
       .catch((error) => console.error("Error fetching projects:", error));
   }, []);
 
   return (
-    <section id="projects" className="py-20 projects-section">
-      <h2 className="text-[#ec008c] text-center text-3xl py-4 font-bold">
-        Featured Projects
+    <section id="projects" className="projects-section">
+      <h2 className="text-transparent bg-clip-text bg-gradient-to-br from-[#ec008c] to-[#fc6767] text-center text-4xl font-bold mb-10">
+        My Latest Projects
       </h2>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <motion.div
-            key={project.id}
-            className="motion-card"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            style={{
-              zIndex: projects.length - index,
-              transform: `translateY(${scrollYProgress.get() * 100}px)`,
-            }}
-          >
-            <ProjectCard project={project} number={index + 1} />
-          </motion.div>
-        ))}
+
+      {/* Container for the sliding cards */}
+      <div className="overflow-hidden mx-auto w-full max-w-7xl bg-black p-8 shadow-xl min-h-[800px]">
+      <motion.div
+          className="flex space-x-6"
+          animate={{
+            x: "-50%", // Scroll 2 cards at a time (50% of the container)
+          }}
+          transition={{
+            x: {
+              repeat: Infinity, // Repeat animation infinitely
+              repeatType: "loop", // Loop continuously
+              duration: 20, // Adjust the duration for scroll speed
+              ease: "linear", // Smooth, linear transition
+            },
+          }}
+        >
+          {/* Loop through projects and add styling */}
+          {projects.map((project) => (
+            <div key={project.id} className="flex-shrink-0 w-[calc(50%-1.5rem)] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

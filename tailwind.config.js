@@ -4,6 +4,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        // Set Playfair Display as the default font
+        sans: ['Playfair Display', ...fontFamily.sans],
+      },
       keyframes: {
         flicker: {
           "to": { maskPosition: "50% 50%, 0 50%" }
